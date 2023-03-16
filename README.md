@@ -27,4 +27,4 @@ In case you want to restart the tool on startup use ```docker-compose up --resta
     cd ./biomultitool
     sudo dockerd &> dockerd.log &
     docker-compose up
- If you get ```MongoDB 5.0+ requires a CPU with AVX support, and your current system does not appear to have that!``` switch mongo version from latest to 4.4.6 in docker-compose file
+ If you get ```MongoDB 5.0+ requires a CPU with AVX support, and your current system does not appear to have that!``` switch mongo version from latest to 4.4.18 in docker-compose file
