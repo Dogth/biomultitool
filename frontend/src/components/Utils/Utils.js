@@ -1,7 +1,7 @@
 import axios from "axios"
 import { Link } from "react-router-dom"
 
-const URL = `http://192.168.1.37:8080/api`
+const URL = `/api`
 
 const API = axios.create({
 	baseURL: URL
