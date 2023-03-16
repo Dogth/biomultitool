@@ -12,7 +12,7 @@ I'm hoping to add annotation and BAGEL4 in the next version
 ## Installation: 
 Depends on docker and docker compose
 
-    git pull https://github.com/Dogth/biomultitool
+    git clone https://github.com/Dogth/biomultitool
     cd ./biomultitool
     docker compose up
 
