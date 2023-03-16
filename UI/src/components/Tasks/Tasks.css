@@ -1,0 +1,72 @@
+.TaskInfo {
+	margin: 15px;
+	background-color: var(--background);
+	border-radius: 10px;
+	grid-area: right;
+}
+
+.Divider {
+	height: 100%;
+	display: grid;
+	grid-template-areas: 'left right';
+	grid-template-columns: 40% 60%;
+}
+
+.TaskInfo {
+	padding-left: 10px;
+	margin: 15px;
+	background-color: var(--background);
+	border-radius: 10px;
+	grid-area: right;
+}
+
+.TaskInfo > .Title {
+	font-size: 1.5rem;
+}
+
+.Title > a {
+	filter: opacity(70%);
+	border-radius: 10px;
+	padding: 5px 15px 5px 15px;
+	background-color: var(--green);
+	text-decoration: none;
+	color: var(--background);
+	transition: all .1s ease-in-out;
+}
+
+.Title > a:hover {
+	filter: opacity(100%);
+}
+
+.Task {
+	padding-left: 10px;
+	min-height: 100px;
+	height: max-content;
+	width: auto;
+	border-radius: 15px;
+	transition: all .1s ease-in-out;
+	z-index: 20;
+}
+
+.Task:hover {
+	transform: scale(102%);
+}
+
+.Title {
+	margin-top: 5px;
+	font-weight: 700;
+}
+
+@media (max-width:600px) {
+	.TaskList {
+		max-height: 600px;
+	}
+	.Divider {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: flex-end;
+	}
+	.Divider {
+		overflow: scroll
+	};
+}

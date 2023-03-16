@@ -1,0 +1,208 @@
+.Download {
+	background-color: var(--green);
+}
+
+.DownloadArch {
+	background-color: var(--blue);
+}
+
+.Delete {
+	background-color: var(--red);
+}
+
+.Delete, .Download, .DownloadArch, .DeletePreview, .DownloadPreview {
+	z-index: 20;
+	filter: opacity(60%);
+	margin: 5px 5px 0 0;
+	float: right;
+	justify-self: right;
+	height: 20px;
+	width: 20px;
+	border: none;
+	border-radius: 15px;
+	transition: all .2s ease-in-out;
+}
+
+.Delete:hover, .Download:hover, .DownloadArch:hover {
+	filter: opacity(100%);
+	transform: scale(110%);
+}
+
+.Form {
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	overflow: hidden;
+}
+
+.ToolForm {
+	justify-self: center;
+	width: 100%;
+	overflow-x: scroll;
+	border-radius: 10px;
+	margin: 15px;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--background);
+}
+
+.ToolForm > form {
+	height: 100%;
+	font-size: 1.3rem;
+	gap: 10px;
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.ToolForm > form > input[type=text] {
+	font-size: 1.3rem;
+	outline: none;
+	padding-left: 5px;
+	height: 50px;
+	border: none;
+	border-radius: 10px;
+}
+
+.ToolForm > form > input[type=text]::placeholder {
+	color: var(--additional);
+}
+
+.ToolForm > form > textarea {
+	font-size: 1.3rem;
+	background-color: var(--white);
+	outline: none;
+	padding-left: 5px;
+	border: none;
+	min-height: 100px;
+	border-radius: 10px;
+	overflow-y: scroll;
+}
+
+.ToolForm > form > textarea::placeholder {
+	color: var(--additional);
+	font-size: 1.3rem;
+}
+
+.ToolForm > form > input[type=submit] {
+	color: var(--background);
+	font-size: 1.3rem;
+	font-weight: 800;
+	height: 40px;
+	outline: none;
+	border: none;
+	background-color: var(--green);
+	filter: opacity(70%);
+	border-radius: 10px;
+	transition: all .1s ease-in-out;
+}
+
+.ToolForm > form > input[type=submit]:hover {
+	filter: opacity(100%);
+}
+
+.ToolForm > form > input[type=submit]:disabled {
+	background-color: var(--additional);
+}
+
+.ToolForm > form > input[type=file] {
+	font-size: 1rem;
+	height: 50px;
+	border-radius: 10px;
+	border: 3px solid var(--additional);
+}
+
+.ToolForm > form > input[type=file]::-webkit-file-upload-button:focus {
+	color: var(--background);
+	background-color: var(--additional);
+}
+
+.ToolForm > form > input[type=file]::-webkit-file-upload-button {
+	height: 100%;
+	width: 100%;
+}
+
+.ToolForm > form > select {
+	color: var(--additional);
+	font-size: 1.3rem;
+	border: none;
+	background-color: var(--white);
+	height: 50px;
+	border-radius: 10px;
+	outline: none;
+}
+
+option {
+	outline: none;
+}
+
+.ProgressBar {
+	height: 50px;
+}
+
+.ProgressBar > progress{
+	appearance:none;
+	height: 30px;
+	width: 100%;
+}
+.ProgressBar > progress[value]::-webkit-progress-bar {
+  background-color: var(--background);
+  border-radius: 10px;
+	border: 3px solid var(--additional);
+	transition: all .1s ease;
+}
+
+.ProgressBar > progress[value]::-webkit-progress-value {
+    border-radius: 6px;
+		background-color: var(--additional);
+		transition: all .1s ease;
+}
+
+.ProgressBar > progress[value="100"]::-webkit-progress-value {
+	background-color: var(--green);
+}
+
+.ProgressBar > progress[value]::after {
+	transition: all .1s ease;
+	color: var(--additional);
+}
+
+.ProgressBar > progress:not([value="0"])::after {
+	content: "Uploading";
+}
+
+.ProgressBar > progress[value="100"]::after {
+	content: "Upload Done";
+}
+
+.ProgressBar > progress[value="100"]::-webkit-progress-bar {
+	border: 3px solid var(--green);
+}
+
+.TaskList, .EntryList {
+	display: flex;
+	flex-flow: column;
+	overflow: scroll;
+	padding: 15px;
+	gap: 15px;
+	grid-area: left;
+	max-height: inherit;
+	transition: all .1s;
+}
+
+@media (max-width:600px){
+	.Form {
+		display: grid;
+	}
+	.ToolForm > form {
+		height: max-content;
+	}
+	.ToolForm {
+		height: max-content;
+		width: 90%;
+	}
+	.Form {
+		overflow: scroll;
+	}
+}

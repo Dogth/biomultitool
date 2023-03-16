@@ -1,0 +1,58 @@
+.DatabaseList {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	height: 100%;
+	overflow-x: scroll;
+}
+
+.DbWrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-height: 100%;
+}
+
+.EntryList {
+	border-radius: 15px;
+	height: 100%;
+}
+
+.Db {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding: 10px;
+	height: 100%;
+	min-width: 400px;
+	border-radius: 10px;
+	overflow: scroll;
+	margin: 0 15px 0px 15px;
+	background-color: var(--background);
+}
+
+.Entry:hover {
+	transform: scale(102%);	
+}
+
+.DbTitle {
+	color: var(--additional);
+	font-size: 2em;
+	font-weight: 1000;
+	margin: 10px 10px 0 10px ;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+@media (max-width:600px) {
+	.DatabaseList {
+		flex-direction: column;
+		width: 100%;
+		overflow-x: hidden;
+	}
+	.EntryList {
+		min-width: 0;
+		width: auto;
+		min-height: 400px;
+	}
+}

@@ -1,0 +1,188 @@
+.Files {
+	justify-content: center;
+	padding: 15px;
+	grid-area: Files;
+	display: grid;
+	gap: 10px;
+	grid-template-rows: repeat(auto-fill, 160px);
+	grid-template-columns: repeat(auto-fill, minmax(max(125px, 50vw/8), 0));
+	overflow: scroll;
+}
+
+.Wrapper {
+	grid-area: left;
+	display: flex;
+	flex-direction: column;
+	overflow: scroll;
+}
+
+.FSnav {
+	margin: 15px;
+	display: flex;
+	grid-area: FSnav;
+	border-radius: 10px;
+	height: max-content;
+	background-color: var(--background);
+	backdrop-filter: blur(10px);
+}
+
+.PathSelector {
+	width: 100%;
+}
+
+.PathSelector > form > input{
+	width: 100%;
+	font-size: 1.3rem;
+	border: none;
+	white-space: nowrap;
+	font-weight: 400;
+	padding: 5px;
+	background-color: var(--background);
+	border-radius: 10px;
+	outline: none;
+}
+
+
+.File, .Dir, .New {
+	overflow: hidden;
+	width: 125px;
+	height: 160px;
+	border-radius: 15px;
+	transition: all .1s ease-in-out;
+}
+
+.File:hover, .Dir:hover, .New:hover {
+	transform: scale(105%);
+}
+
+.File {
+	background-color: var(--paleGreen);
+}
+
+.Dir {
+	background-color: var(--paleOrange);
+}
+
+.New {
+	background-color: var(--background);
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	outline: dashed 3px var(--additional);
+	outline-offset: -6px;
+	border-radius: 10px;
+}
+
+iframe {
+	position:static;
+	border-radius: 10px;
+	width: 100%;
+	height: 100vh;
+	border: none;
+}
+
+input[type="submit"]:hover{
+	background-color: var(--additional);
+}
+
+input[type="file"]::file-selector-button {
+	vertical-align: center;
+	font-size: 1.5rem;
+	white-space: break-spaces;
+	font-weight: 800;
+	outline-offset: -10px;
+	height: 130px;
+	width: 125px;
+  border: none;
+  background: var(--background);
+  color: var(--additional);
+  transition: all .2s ease-in-out;
+}
+
+.New > .ProgressBar {
+	width: 80%;
+	align-self: center;
+}
+
+.New > .ProgressBar > progress {
+	height: 20px;
+}
+
+.New > .ProgressBar > progress[value]::after {
+	content: none;
+}
+
+.Preview {
+	z-index: 40;
+	grid-area: right;
+	overflow: scroll;
+	margin: 15px;
+	border-radius: 10px;
+	background-color: var(--background);
+}
+
+.Info {
+	border-radius: 10px;
+	width:auto;
+	margin: 30px 0 0 5px;
+	height: 130px;
+}
+
+.FileInfo {
+	max-width: 25%;
+	margin: 10px;
+	position: absolute;
+	backdrop-filter: blur(5px);
+	background-color: #FFFFFF8F;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+.FileInfo > p {
+	margin: 5px;
+}
+
+.PreviewImg {
+	width: 100%;
+	height: 100%;
+}
+
+.FileData {
+	padding-top: 75px;
+	margin: 10px;
+}
+
+.Filename {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 1.1rem;
+	font-weight: 1000;
+}
+
+.Ext {
+	margin-top: 40px;
+	font-weight: 700;
+}
+
+.Size {
+	font-size: .7rem;
+	font-weight: 700;
+}
+
+.Dir > a {
+	color: #000000;
+	text-decoration: none;
+}
+
+@media (max-width:600px) {
+	.Wrapper {
+		grid-template-columns: 100%;
+		grid-template-areas: 
+		'FSnav'
+		'Files';
+	}
+	.Preview {
+		display: none;
+	}
+}
