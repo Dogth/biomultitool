@@ -35,8 +35,6 @@ services:
 
   db:
     image: mongo
-    volumes:
-      - db:/data/db
     networks:
       bmt:
         aliases:

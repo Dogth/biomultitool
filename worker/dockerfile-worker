@@ -2,5 +2,5 @@ FROM dogth/bmtworker
 
 WORKDIR /worker
 COPY * /worker/
-RUN npm install --production
-CMD node /worker/index.js
+RUN npm ci --omit=dev
+CMD npm run start
