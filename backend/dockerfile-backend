@@ -2,6 +2,6 @@ FROM node:18-alpine
 
 WORKDIR /backend
 COPY . .
-RUN npm install --production
+RUN npm ci --omit=dev
 
-CMD node index.js
+CMD npm run start
