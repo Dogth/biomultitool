@@ -1,41 +1,41 @@
 :root {
-	--green: #73B248;
-	--red: #f75828;
-	--orange: #F79128;
-	--blue: #288af7;
-	--background: #f1f1f1;
-	--neutral: #d9d9d9;
-	--black: #878787;
-	--paleGreen: #dfeed5;
-	--paleBlue: #d5e0ee;
-	--paleOrange: #eee3d5;
-	--paleRed: #eed9d5;
-	--additional: #c0c0c0;
-	--white: #fefefe;
-	font-family: "Futura";
+  --green: #73b248;
+  --red: #f75828;
+  --orange: #f79128;
+  --blue: #288af7;
+  --background: #f1f1f1;
+  --neutral: #d9d9d9;
+  --black: #878787;
+  --paleGreen: #dfeed5;
+  --paleBlue: #d5e0ee;
+  --paleOrange: #eee3d5;
+  --paleRed: #eed9d5;
+  --additional: #c0c0c0;
+  --white: #fefefe;
+  font-family: "Futura";
 }
 
 form {
-	font-family: "Futura";
+  font-family: "Futura";
 }
 
 .Grid {
-	display: grid;
-	grid-template-areas: 
-	'bar bar'
-	'nav tools';
-	grid-template-rows: 6vh 94vh;
-	grid-template-columns: 16vw 84vw;
-	background-color: var(--background);
+  display: grid;
+  grid-template-areas:
+    "bar bar"
+    "nav tools";
+  grid-template-rows: 6vh 94vh;
+  grid-template-columns: 16vw 84vw;
+  background-color: var(--background);
 }
 
 @media (max-width: 600px) {
-	.Grid {
-		display:grid;
-		grid-template-areas: 
-		'nav'
-		'tools';
-		grid-template-rows: 7vh 93vh;
-		grid-template-columns: 100vw;
-	}
+  .Grid {
+    display: grid;
+    grid-template-areas:
+      "nav"
+      "tools";
+    grid-template-rows: 7vh 93vh;
+    grid-template-columns: 100vw;
+  }
 }

@@ -1,16 +1,14 @@
-import { pino } from 'pino'
+import { pino } from "pino";
 
-const logParams = {
-
-}
+const logParams = {};
 
 const streams = [
 	{ stream: process.stdout },
-	{ stream: pino.destination(`/shared/worker.log`)}
-]
+	{ stream: pino.destination(`/shared/worker.log`) },
+];
 
-const logger = pino(logParams, pino.multistream(streams))
+const logger = pino(logParams, pino.multistream(streams));
 
-logger.info(`Logging started...`)
+logger.info(`Logging started...`);
 
-export default logger
+export default logger;

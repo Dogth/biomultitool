@@ -1,7 +1,7 @@
 .Tool {
-	grid-area: tools;
-	margin: 15px;
-	border-radius: 15px;
-	height: inherit;
-	background-color: var(--white);
+  grid-area: tools;
+  margin: 15px;
+  border-radius: 15px;
+  height: inherit;
+  background-color: var(--white);
 }

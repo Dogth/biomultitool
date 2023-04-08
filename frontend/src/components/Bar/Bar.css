@@ -1,12 +1,12 @@
 .Bar {
-	grid-area: bar;
-	background-color: var(--green);
-	vertical-align: baseline;
+  grid-area: bar;
+  background-color: var(--green);
+  vertical-align: baseline;
 }
 
 .Header {
-	font-size: 2em;
-	font-weight: 1000;
-	width: max-content;
-	color: var(--background);
+  font-size: 2em;
+  font-weight: 1000;
+  width: max-content;
+  color: var(--background);
 }

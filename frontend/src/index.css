@@ -1,28 +1,28 @@
 * {
-	font-size: 1rem;
-	margin: 0px;
-	padding: 0px;
+  font-size: 1rem;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
- 	max-width: 100vw;
- }
-
-select, input, textarea {
-	color: var(--black);
-	font-family: "Futura";
+  max-width: 100vw;
 }
 
+select,
+input,
+textarea {
+  color: var(--black);
+  font-family: "Futura";
+}
 
 @font-face {
   font-family: "Futura";
-  src: url('../public/Futura/Futura\ Medium/Futura\ Medium.otf');
+  src: url("../public/Futura/Futura\ Medium/Futura\ Medium.otf");
   font-weight: normal;
 }
 
 @font-face {
   font-family: Futura;
-  src: url('../public/Futura/Futura\ Bold/Futura\ Bold.otf') ;
+  src: url("../public/Futura/Futura\ Bold/Futura\ Bold.otf");
   font-weight: 800;
 }
-

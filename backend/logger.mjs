@@ -1,15 +1,11 @@
-import { pino } from 'pino'
+import { pino } from "pino";
 
-const logParams = {
+const logParams = {};
 
-}
+const streams = [{ stream: process.stdout }];
 
-const streams = [
- { stream: process.stdout }
-]
+const logger = pino(logParams, pino.multistream(streams));
 
-const logger = pino(logParams, pino.multistream(streams))
+logger.info(`Logging started...`);
 
-logger.info(`Logging started...`)
-
-export default logger
+export default logger;

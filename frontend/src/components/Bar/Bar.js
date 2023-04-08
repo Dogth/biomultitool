@@ -1,9 +1,7 @@
-import './Bar.css'
+import "./Bar.css";
 
 const Bar = () => {
-	return (
-		<div className='Bar'></div>
-	)
-}
+	return <div className="Bar"></div>;
+};
 
-export default Bar
+export default Bar;
