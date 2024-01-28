@@ -9,13 +9,12 @@ import cors from "cors";
 const app = express();
 
 app.use(cors());
-app.use(limit);
-app.use(express.static(path));
+app.use(express.static('/backend/build/'));
 app.use(`/api/files`, files);
 app.use(`/api/db`, databases);
 app.use(`/api/services`, services);
 app.use(`/api/download`, download);
 
-app.get("(/*)?", (req, res) => res.sendFile(`/build/index.html`));
+app.get("(/*)?", (req, res) => res.sendFile(`/backend/build/index.html`));
 
 app.listen(8080, () => logger.info(`Backend ready`));
