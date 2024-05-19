@@ -1,5 +1,5 @@
 # BioMultiTool
-Simple wrapper for a few bioinformatics tools
+A simple wrapper for a few bioinformatics tools.
 Currently supports only:
 - [NCBI BLAST+](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
 - [Prodigal](https://github.com/hyattpd/Prodigal)
